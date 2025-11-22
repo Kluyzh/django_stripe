@@ -3,11 +3,8 @@ import os
 import stripe
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
-from dotenv import load_dotenv
 
 from .models import Item
-
-load_dotenv()
 
 stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
 
