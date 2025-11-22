@@ -69,7 +69,7 @@ class OrderItem(models.Model):
     class Meta:
         verbose_name = 'Товары в заказе'
         verbose_name_plural = 'Товары в заказах'
-        unique_together = ['order', 'item']
+        unique_together = ('order', 'item')
 
     def __str__(self):
         return f'{self.item.name} - {self.count} шт.'

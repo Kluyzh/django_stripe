@@ -13,7 +13,7 @@ class OrderItemInline(admin.TabularInline):
 
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description', 'price')
+    list_display = ('id', 'name', 'description', 'price')
     search_fields = ('name',)
 
 
